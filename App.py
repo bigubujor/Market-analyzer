@@ -88,7 +88,7 @@ def add_indicators(df):
     df["ATR"] = ta.atr(df["High"], df["Low"], df["Close"], length=14)
     df["Vol_SMA"] = df["Volume"].rolling(20).mean()
     return df
-  def generate_signal(row, prev=None):
+def generate_signal(row, prev=None):
     score = 0
     details = []
     rsi = row.get("RSI")
