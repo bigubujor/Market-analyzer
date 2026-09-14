@@ -10,7 +10,8 @@ PORTFOLIO = {
     "MSFT": "Microsoft", "ORCL": "Oracle", "NOW": "ServiceNow", "INTU": "Intuit",
     "LULU": "Lululemon", "TTD": "Trade Desk", "SPCX": "SpaceX", "OKLO": "Oklo",
     "NVDA": "Nvidia", "HWM": "Howmet", "V": "Visa", "ARGX": "argenx",
-    "VRTX": "Vertex", "NXE": "Nexgen Energy"
+    "VRTX": "Vertex", "NXE": "Nexgen Energy",
+    "SMCI": "Super Micro Computer"
 }
 
 def load_td(ticker, interval, key):
