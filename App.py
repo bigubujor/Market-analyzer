@@ -1,5 +1,16 @@
+import subprocess
+import sys
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "yfinance", "plotly", "pandas-ta"])
+
 import streamlit as st
 import yfinance as yf
+import pandas as pd
+import pandas_ta as ta
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from datetime import datetime
+import requests
 import pandas as pd
 import pandas_ta as ta
 import plotly.graph_objects as go
