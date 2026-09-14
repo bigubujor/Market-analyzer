@@ -95,8 +95,48 @@ def generate_signal(row, prev=None):
     return sig, score, details
 
 def plot_chart(df, ticker, interval):
-    fig = make_subplots(rows=3, cols=1, shared_xaxes=True, vertical_spacing=0.03,
-                        row_heights=[0.55, 0.25, 0.2],
-                        subplot_titles=(f"{ticker} – {interval}", "RSI", "Volume"))
-    fig.add_trace(go.Candlestick(x=df.index, open=df["Open"], high=df["High"],
-                                 low=df["Low"], close=df["Close"], 
+    fig = make_subplots(
+        rows=3, cols=1, shared_xaxes=True, vertical_spacing=0.03,
+        row_heights=[0.55, 0.25, 0.2],
+        subplot_titles=(f"{ticker} – {interval}", "RSI", "Volume")
+    )
+    fig.add_trace(
+        go.Candlestick(
+            x=df.index,
+            open=df["Open"],
+            high=df["High"],
+            low=df["Low"],
+            close=df["Close"],
+            name="Price"
+        ),
+        row=1, col=1
+    )
+    if "EMA9" in df.columns:
+        fig.add_trace(
+            go.Scatter(x=df.index, y=df["EMA9"], name="EMA9", line=dict(color="orange", width=1)),
+            row=1, col=1
+        )
+    if "EMA21" in df.columns:
+        fig.add_trace(
+            go.Scatter(x=df.index, y=df["EMA21"], name="EMA21", line=dict(color="blue", width=1)),
+            row=1, col=1
+        )
+    if "RSI" in df.columns:
+        fig.add_trace(
+            go.Scatter(x=df.index, y=df["RSI"], name="RSI", line=dict(color="lime")),
+            row=2, col=1
+        )
+        fig.add_hline(y=70, line_dash="dash", line_color="red", row=2, col=1)
+        fig.add_hline(y=30, line_dash="dash", line_color="green", row=2, col=1)
+    colors = ["red" if c < o else "green" for c, o in zip(df["Close"], df["Open"])]
+    fig.add_trace(
+        go.Bar(x=df.index, y=df["Volume"], marker_color=colors, name="Volume"),
+        row=3, col=1
+    )
+    fig.update_layout(
+        height=750,
+        xaxis_rangeslider_visible=False,
+        template="plotly_dark",
+        showlegend=True
+    )
+    return fig 
