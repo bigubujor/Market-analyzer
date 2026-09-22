@@ -1,0 +1,110 @@
+{
+  "reference_date": "2026-09-22",
+  "monthly_base_usd": 1750,
+  "stock_plan_monthly_usd": 525,
+  "tickers": {
+    "MSFT": {
+      "role": "Winner",
+      "price": 501.4201,
+      "direct_exposure": 0.10035,
+      "context": "TP 550; no new tactical buy"
+    },
+    "NOW": {
+      "role": "Winner",
+      "price": 137.4001,
+      "direct_exposure": 0.20144,
+      "context": "TP 200 / 220"
+    },
+    "ORCL": {
+      "role": "Winner + optional new lot",
+      "price": 148.2898,
+      "direct_exposure": 0.05311,
+      "context": "Current TP 220; optional new lot 140–145"
+    },
+    "SPCX": {
+      "role": "Winner",
+      "price": 151.8198,
+      "direct_exposure": 0.04845,
+      "context": "Partial TP 160–180"
+    },
+    "INTU": {
+      "role": "Recovery",
+      "price": 303.5707,
+      "direct_exposure": 0.18348,
+      "context": "Recovery 300–305; deeper 285–290"
+    },
+    "LULU": {
+      "role": "Legacy / exit management",
+      "price": 100.5799,
+      "direct_exposure": 0.15082,
+      "context": "No average-down; exits 120–130 / 130–140"
+    },
+    "TTD": {
+      "role": "Legacy / exit management",
+      "price": 13.8701,
+      "direct_exposure": 0.12884,
+      "context": "No average-down; exits 20 / 22"
+    },
+    "OKLO": {
+      "role": "Speculative",
+      "price": 40.1399,
+      "direct_exposure": 0.0219,
+      "context": "Limit-only 33–35; max 2–3%"
+    },
+    "HWM": {
+      "role": "Stock Plan priority",
+      "price": 226.7072,
+      "direct_exposure": 0.01207,
+      "stock_plan_weight": 0.11079,
+      "target_stock_plan_weight": 0.25
+    },
+    "NVDA": {
+      "role": "Stock Plan core",
+      "price": 227.3192,
+      "direct_exposure": 0.0218,
+      "stock_plan_weight": 0.20013,
+      "target_stock_plan_weight": 0.2
+    },
+    "V": {
+      "role": "Stock Plan quality",
+      "price": 369.6447,
+      "direct_exposure": 0.00952,
+      "stock_plan_weight": 0.08745,
+      "target_stock_plan_weight": 0.15
+    },
+    "VRTX": {
+      "role": "Stock Plan quality",
+      "price": 509.4173,
+      "direct_exposure": 0.00872,
+      "stock_plan_weight": 0.08009,
+      "target_stock_plan_weight": 0.12
+    },
+    "ARGX": {
+      "role": "Stock Plan satellite",
+      "price": 985.1673,
+      "direct_exposure": 0.00897,
+      "stock_plan_weight": 0.08233,
+      "target_stock_plan_weight": 0.1
+    },
+    "NXE": {
+      "role": "Stock Plan satellite",
+      "price": 9.79993,
+      "direct_exposure": 0.00985,
+      "stock_plan_weight": 0.09046,
+      "target_stock_plan_weight": 0.08
+    },
+    "IUHC": {
+      "role": "Sector ETF in Stock Plan",
+      "price": 13.64495,
+      "direct_exposure": 0.01902,
+      "stock_plan_weight": 0.17466,
+      "target_stock_plan_weight": 0.05,
+      "instrument": {
+        "exchange": "LSE",
+        "currency": "USD",
+        "ric": "IUHC.L",
+        "isin": "IE00B43HR379"
+      }
+    }
+  }
+}
